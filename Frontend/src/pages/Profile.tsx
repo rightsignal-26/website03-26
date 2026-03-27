@@ -71,9 +71,9 @@ export function Profile() {
               bio: '',
               website: ''
             }, {
-              onConflict: 'id',
-              returning: 'representation'
+              onConflict: 'id'
             })
+            .select()
             .single();
 
           if (upsertError) throw upsertError;
@@ -172,9 +172,9 @@ export function Profile() {
           website: website || profile.website,
           avatar_url: avatarUrl || profile.avatar_url,
         }, {
-          onConflict: 'id',
-          returning: 'representation'
+          onConflict: 'id'
         })
+        .select()
         .single();
 
       if (error) throw error;
