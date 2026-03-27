@@ -127,7 +127,7 @@ export function Profile() {
 
   if (loading) {
     return (
-      <div className="w-full pb-20 sm:pb-0 flex items-center justify-center min-h-[400px]">
+      <div className="w-full pb-20 sm:pb-0 flex items-center justify-center min-h-100">
         <div className="text-gray-400">Loading profile...</div>
       </div>
     );
@@ -199,7 +199,7 @@ export function Profile() {
       className="w-full pb-20 sm:pb-0"
     >
       {/* Banner Area */}
-      <div className="relative h-32 sm:h-48 bg-gradient-to-r from-brand to-blue-900">
+      <div className="relative h-32 sm:h-48 bg-linear-to-r from-brand to-blue-900">
         {/* Avatar */}
         <div className="absolute -bottom-16 left-4 w-32 h-32 bg-dark rounded-full border-4 border-dark overflow-hidden transition-colors duration-300 z-10">
           <img 
@@ -337,7 +337,7 @@ export function Profile() {
       </div>
       
       {/* Tab Content */}
-      <div className="min-h-[300px]">
+      <div className="min-h-75">
         <AnimatePresence mode="wait">
           {activeTab === 'Posts' && (
             <motion.div
